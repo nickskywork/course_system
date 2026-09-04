@@ -3,7 +3,7 @@ import datetime
 import os
 import pandas as pd
 
-st.title("Python 程式實戰營 - 課程報名系統")
+st.title("課程報名系統")
 
 # 1. 建立文字輸入框
 name = st.text_input("請輸入您的姓名")
@@ -11,7 +11,7 @@ name = st.text_input("請輸入您的姓名")
 # 2. 建立下拉選單
 course = st.selectbox(
     "請選擇想報名的課程",
-    ["Python 基礎入門班", "投資理財模擬實戰班", "AI 協作開發班"]
+    ["工安課程研習班, "投資理財模擬實戰班", "淺能開發班"]
 )
 
 # 3. 建立送出按鈕與防呆存檔邏輯
