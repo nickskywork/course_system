@@ -11,7 +11,7 @@ name = st.text_input("請輸入您的姓名")
 # 2. 建立下拉選單
 course = st.selectbox(
     "請選擇想報名的課程",
-    ["工安課程研習班, "投資理財模擬實戰班", "淺能開發班"]
+    ["工安課程研習班", "投資理財模擬實戰班", "淺能開發班"]
 )
 
 # 3. 建立送出按鈕與防呆存檔邏輯
@@ -47,7 +47,7 @@ if os.path.exists("registrations.txt"):
         df = pd.read_csv("registrations.txt", header=None, names=["報名時間", "學員姓名", "報名課程"])
         if not df.empty:
             
-            filter_options = ["全部顯示", "工安課程研習班, "投資理財模擬實戰班", "淺能開發班"]
+            filter_options = ["全部顯示", "工安課程研習班", "投資理財模擬實戰班", "淺能開發班"]
             selected_course = st.selectbox("🔍 篩選欲檢視的課程", filter_options)
             
             if selected_course != "全部顯示":
